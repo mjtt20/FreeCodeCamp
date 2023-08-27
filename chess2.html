@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  #chessboard {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 1px solid #000;
+  }
+
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .white {
+    background-color: #fff;
+  }
+
+  .black {
+    background-color: #888;
+  }
+</style>
+<title>Chess Game</title>
+</head>
+<body>
+  <div id="chessboard"></div>
+
+  <script>
+    const chessboard = document.getElementById('chessboard');
+    const cells = [];
+
+    // Initialize chessboard cells
+    for (let row = 0; row < 8; row++) {
+      cells[row] = [];
+      for (let col = 0; col < 8; col++) {
+        const cell = document.createElement('div');
+        cell.className = `cell ${row % 2 === col % 2 ? 'white' : 'black'}`;
+        cell.dataset.row = row;
+        cell.dataset.col = col;
+        cells[row][col] = cell;
+        cell.addEventListener('click', handleCellClick);
+        chessboard.appendChild(cell);
+      }
+    }
+
+    let selectedPiece = null;
+
+    function handleCellClick(event) {
+      const clickedCell = event.target;
+      const { row, col } = clickedCell.dataset;
+
+      if (selectedPiece) {
+        // Move piece
+        const { selectedRow, selectedCol } = selectedPiece.dataset;
+        if (isValidMove(selectedRow, selectedCol, row, col)) {
+          movePiece(selectedPiece, row, col);
+        }
+        selectedPiece.classList.remove('selected');
+        selectedPiece = null;
+      } else {
+        // Select piece
+        selectedPiece = cells[row][col];
+        selectedPiece.classList.add('selected');
+      }
+    }
+
+    function isValidMove(fromRow, fromCol, toRow, toCol) {
+      // Implement your logic here to validate moves
+      return true; // For now, assume all moves are valid
+    }
+
+    function movePiece(piece, toRow, toCol) {
+      const { row, col } = piece.dataset;
+      cells[toRow][toCol].innerHTML = piece.innerHTML;
+      piece.innerHTML = '';
+      piece.classList.remove('selected');
+    }
+  </script>
+</body>
+</html>

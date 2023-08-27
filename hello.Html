@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lobster&family=Mukta:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Mukta', sans-serif;
+        background-color: black;
+        color: black;
+        width: 80%;
+        margin: auto;
+        background-image: url(/haha.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        display:flex ;
+        position: relative;
+    }
+    .content2{
+        display: flex;
+    }
+    .img1{
+        width: 355px;
+        border-radius: 25px;
+    }
+    .img3{
+        width:355px;
+        border-radius: 25px;
+    }
+    .img2{
+        width: 313px;
+        border-radius: 25px;
+    }
+    .div1,.div2,.div3{
+        background-color: #ffffff10;
+        border: 5px solid #ffffff10;
+        border-radius: 25px;
+        text-align: center;
+        margin: 40px;
+        backdrop-filter:blur(50px);
+    }
+    .div1{
+        height: 480px;
+    }
+    @media only screen and (min-width:600px) and (max-width:1000px) {
+        .content2{
+            flex-direction: column;
+        }
+        .div3{
+            margin: 5px;
+        }
+    }
+    @media only screen and (max-width:600px){
+        .container{
+            flex-direction: column;
+        }
+        .content2{
+            flex-direction: column;
+        }
+        .div1 img{
+            width: 100%;
+        }
+        .div2 img{
+            width: 100%;
+        }
+        .div3 img{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+        <section class="container">
+            <section class="content1">
+                <div class="div1">
+                    <h2>HELLO SOBAI K!</h2>
+                    <img src="/khalid farhan.jpeg" alt="Loading" class="img1">
+                </div>
+            </section>
+            <section class="content2">
+                <div class="div2">
+                    <h2>WHAT'S UP POLAPAIN!</h2>
+                    <img src="/salman.png" alt="Loading" class="img2">
+                </div>
+                <div class="div3">
+                    <h2>HELLO GUYS THIS IS RAFSAN <br> THE CHOTOBHAI!</h2>
+                    <img src="/rafsan.jpg" alt="Loading" class="img3">
+                </div>
+            </section>
+         </section>
+    </div>
+</body>
+</html>

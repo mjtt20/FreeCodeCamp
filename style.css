@@ -1,0 +1,78 @@
+
+    body{
+        background-color: black;
+        font-family: 'Mukta', sans-serif;
+    }
+    .as{
+        color: aqua;
+        text-align: center;
+        border: 2px solid aqua;
+        margin-bottom:60px;
+        position: sticky;
+        top: 0;
+        background-color: black;
+    }
+    .content{
+        color: aqua;
+        border: 5px solid aqua;
+        border-radius: 10px;
+        margin: 8px;
+    }
+    .head{
+        color: black;
+        background-color: aqua;
+        margin-top: 0px;
+        text-align: center;
+    }
+    .div{
+        display: grid;
+        grid-template-columns:repeat(7,1fr);
+       color: aqua;
+       margin: 10px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+    }
+    .box{
+        padding: 10px;
+        margin: 5px;
+        transition: box-shadow 0.1s,color 0.1s,background-color 0.1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box:hover{
+        border: 2px solid aqua;
+        margin: 3px;
+        border-radius: 5px;
+        color: aqua;
+        box-shadow: 0px 0px 20px aqua;
+    }
+    .h1{
+        text-align: center;
+        color: aqua;
+        transition: text-shadow 0.5s;
+    }
+    .h4{
+        text-align: center;
+        color: aqua;
+        transition: text-shadow 0.5s;
+    }
+    .list{
+        color: aqua;
+    }
+    .lis{
+        transition: font-size 1s,border 1s;
+    }
+    .h1:hover{
+        text-shadow: 0px 0px 35px aqua;
+    }
+    .h4:hover{
+        text-shadow: 0px 0px 35px aqua;
+    }
+    .lis:hover{
+        font-size: 30px;
+        border: 2px solid aqua;
+        border-radius: 10px;
+    }

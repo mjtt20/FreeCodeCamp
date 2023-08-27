@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .fb{
+            height: 120px;
+            width: 120px;
+            border: 6px solid;
+            margin-top: 100px;
+            transition: width 5s,background-color 1s;
+
+        }
+        .bo{
+            height: 200px;
+            width: 200px;
+            border: 6px solid;
+            padding-top: 0px;
+            transition: margin-left 5s,transform 5s  ;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 6px solid;
+            border-radius: 60px;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+        
+        .bo:hover{
+            margin-left: 780px;
+            transform: rotate(765deg);
+            border-radius: 25px;
+            background-color: green;
+            color: green;
+        }
+        .box:hover{
+            
+            background-color:red;
+            color: red;
+        }
+        .fb:hover{
+            width: 900px;
+            background-color: black;
+        }
+        .h{
+            
+            font-size: 50px;
+        }
+        
+        
+    </style>
+<body>
+    <div class="fb">
+        <div class="bo">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>
